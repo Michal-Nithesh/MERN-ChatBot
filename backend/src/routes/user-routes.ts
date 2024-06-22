@@ -1,8 +1,11 @@
 import { Router } from "express";
-import { getAllUsers } from "../controllers/user-controllers.js";
+import { getAllUsers, userLogin, userSignup } from "../controllers/user-controllers.js";
+import { loginValidator, signupValidator, validate } from "../utils/validators.js";
 
-const userRouter = Router();
+const userRoutes = Router();
 
-userRouter.get("/", getAllUsers)
+userRoutes.get("/", getAllUsers);
+userRoutes.post("/singup", validate(signupValidator) , userSignup);
+userRoutes.post("/login", validate(loginValidator) , userLogin);
 
-export default userRouter;
+export default userRoutes;
