@@ -22,7 +22,7 @@
     "jsonwebtoken": "^9.0.1",
     "mongoose": "^7.4.2",
     "morgan": "^1.10.0",
-    "openai": "^4.52.0"
+    "openai": "^3.3.0"
   },
   "devDependencies": {
     "@types/bcrypt": "^5.0.0",
